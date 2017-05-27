@@ -22,6 +22,12 @@ public class PedidoInclusao extends AppCompatActivity {
 
     private Boolean validarDados (Pedido pedidoValidar){
 
+        Log.i("LogBA", "validando");
+        //if (pedidoValidar.getCliente().toString()=="") {return Boolean.FALSE;};
+        //if (pedidoValidar.getContato().toString()=="") {return Boolean.FALSE;};
+        //if (pedidoValidar.getPedido().toString()=="") {return Boolean.FALSE;};
+        //if (pedidoValidar.getEntrega().toString()=="") {return Boolean.FALSE;};
+
         return Boolean.TRUE;
 
     }
@@ -61,7 +67,13 @@ public class PedidoInclusao extends AppCompatActivity {
         sData= textData.getText().toString();
         sContato=textContato.getText().toString();
         sPedido=textPedido.getText().toString();
-        fValor=Float.parseFloat(textValor.getText().toString());
+
+        Log.i("logBA","validando");
+
+        if (textValor.getText().toString()=="")
+            {fValor=Float.parseFloat("0");}
+        else
+        {fValor=Float.parseFloat(textValor.getText().toString());}
 
         if (chkPago.isChecked()){
             iPago=1;}
@@ -90,7 +102,9 @@ public class PedidoInclusao extends AppCompatActivity {
 
             finish();
         }
-
+        else
+        {Toast.makeText(this, "Preencha os campos do cadastro!", Toast.LENGTH_LONG)
+                .show();}
 
 
     }

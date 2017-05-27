@@ -26,11 +26,6 @@ public class PedidoAdapter extends BaseAdapter {
         this.contexto = contexto;
     }
 
-    //public float pedidoValor(){
-
-//    }
-
-
     @Override
     public int getCount() {
         return listapedidos.size();

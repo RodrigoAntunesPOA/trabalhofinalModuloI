@@ -19,7 +19,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="-----------------------------------------------------------------------------------------------------------"
+        android:text="------------------------------------------------------------------------------------------"
         />
 
 
@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="6pt"
             android:checked="true"
-            android:text="Pendentes" />
+            android:text="Entregues" />
 
         <CheckBox
             android:id="@+id/chkFilPagos"
@@ -58,7 +58,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="-----------------------------------------------------------------------------------------------------------"
+        android:text="------------------------------------------------------------------------------------------"
         />
 
     <ListView
@@ -67,15 +67,14 @@
         android:layout_height="212dp"
         android:layout_marginLeft="6pt"
         android:layout_marginRight="3pt"
-        android:layout_weight="0.85"
-        android:clickable="true" />
+        android:layout_weight="0.85"/>
 
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="-----------------------------------------------------------------------------------------------------------"
-       />
+        android:text="------------------------------------------------------------------------------------------"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -125,7 +124,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="-----------------------------------------------------------------------------------------------------------"
+        android:text="------------------------------------------------------------------------------------------"
         />
 
     <LinearLayout

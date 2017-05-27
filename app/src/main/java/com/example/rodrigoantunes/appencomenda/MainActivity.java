@@ -76,9 +76,28 @@ public class MainActivity extends AppCompatActivity {
 
         listViewPedido.setAdapter(adaptador);
 
+//        Log.i("tagBA","ANtes");
+//        listViewPedido.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+//            @Override
+//            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+//                Log.i("Teste","Teste");
+//                return true;
+//            }
+//        });
+//
+//        listViewPedido.setOnItemClickListener(new android.widget.AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
+//                Pedido item = (Pedido) listViewPedido.getItemAtPosition(position);
+//                Toast.makeText(MainActivity.this,"You selected : " + item.getCliente(),Toast.LENGTH_SHORT).show();
+//            }
+//        });
+//
+//
+///
+      listViewPedido.setOnItemClickListener(
 
-        listViewPedido.setOnItemClickListener(
-                new AdapterView.OnItemClickListener() {
+               new AdapterView.OnItemClickListener() {
 
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -89,25 +108,27 @@ public class MainActivity extends AppCompatActivity {
                         Intent it = new Intent(MainActivity.this,  PedidoEdicao.class);
                         it.putExtra("pedido",pedido);
                         startActivity(it);
+
                     }
                 }
         );
 
-
+        atualizaTotais();
 
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        carregarTela();
+    }
 
     public void listarPedidos(View view) {
 
         CheckBox chkPendentes = (CheckBox) findViewById(R.id.chkFilPendentes);
 
         CheckBox chkPagos = (CheckBox) findViewById(R.id.chkFilPagos);
-
-        txtTotal = (TextView) findViewById(R.id.txtTotal);
-
-        txtQtdTotal = (TextView) findViewById(R.id.txtqtdTotal);
-
 
         if (chkPagos.isChecked()) {
             iPagos = 1;
@@ -142,11 +163,25 @@ public class MainActivity extends AppCompatActivity {
 
         if (listaPedido.size() == 0) {
 
+            Toast.makeText(this, "Nenhum pedido encontrado!", Toast.LENGTH_LONG)
+                    .show();
+        }
+
+        atualizaTotais();
+
+    }
+
+    public void atualizaTotais(){
+
+        txtTotal = (TextView) findViewById(R.id.txtTotal);
+
+        txtQtdTotal = (TextView) findViewById(R.id.txtqtdTotal);
+
+        if (listaPedido.size() == 0) {
+
             txtTotal.setText("0,00");
             txtQtdTotal.setText("0");
 
-            Toast.makeText(this, "Nenhum pedido encontrado!", Toast.LENGTH_LONG)
-                    .show();
         } else {
             iQtdeTotal=adaptador.getCount();
             txtQtdTotal.setText(iQtdeTotal.toString());

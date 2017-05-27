@@ -37,7 +37,7 @@ public class PedidoEdicao extends AppCompatActivity  {
         textPedidoAlt= (EditText) findViewById(R.id.txtPedidoAlt);
         textPedidoAlt.setText(pedidoEditar.getPedido().toString());
 
-        textQtoAlt= (EditText) findViewById(R.id.txtQuandoAlt);
+        textQtoAlt= (EditText) findViewById(R.id.txtQtoAlt);
         textQtoAlt.setText(pedidoEditar.getValor().toString());
 
         textContatoAlt= (EditText) findViewById(R.id.txtContatoAlt);
@@ -67,6 +67,7 @@ public class PedidoEdicao extends AppCompatActivity  {
 
         Toast.makeText(this, "Pedido excluído com sucesso!", Toast.LENGTH_LONG)
                 .show();
+        finish();
     }
 
     public void salvarEdicao (View view){
@@ -96,6 +97,7 @@ public class PedidoEdicao extends AppCompatActivity  {
         Toast.makeText(this, "Pedido alterado com sucesso!", Toast.LENGTH_LONG)
                 .show();
 
+        finish();
     }
 
 

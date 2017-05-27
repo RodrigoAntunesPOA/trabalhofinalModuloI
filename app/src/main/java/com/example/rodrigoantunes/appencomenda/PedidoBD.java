@@ -92,11 +92,14 @@ public class PedidoBD {
         //listaPedidos.add(new Pedido(1,"Cliente","10/10/2010","99760000","isso e aquilo",Float.parseFloat("5.99"), bPagos , bPendentes));
         //listaPedidos.add(new Pedido(2,"Joao","15/11/2017","3344556677", "bolo e espinafre bolo e espinafre  bolo e espinafre bolo e espinafre bolo e espinafre bolo e espinafre bolo e espinafre ", Float.parseFloat("100.99"), Boolean.parseBoolean("False"),Boolean.parseBoolean("True")));
 
+        Log.i("LogBA", iPendentes.toString());
+
+        Log.i("LogBA", iPagos.toString());
 
         Cursor cursor = banco.query("pedidos",
                 new String[]{"id", "cliente", "dataEntrega", "contato", "pedido", "valor", "entregue", "pago"},
-                "(entregue=? OR pago=?)",
-                new String []{iPendentes.toString(), iPagos.toString()},
+                null, //"(entregue=? AND pago=?)",
+                null, //new String []{iPendentes.toString(), iPagos.toString()},
                 null,
                 null,
                 "dataEntrega");

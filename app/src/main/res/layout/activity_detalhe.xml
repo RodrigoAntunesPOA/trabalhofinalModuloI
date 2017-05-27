@@ -3,13 +3,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:weightSum="1">
+    android:weightSum="1"
+    android:clickable="false"
+    android:descendantFocusability="blocksDescendants"
+    android:focusable="false"
+    android:focusableInTouchMode="false">
 
     <LinearLayout
         android:id="@+id/detTit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:weightSum="1">
+        android:weightSum="1"
+        android:clickable="false"
+        android:descendantFocusability="blocksDescendants"
+        android:focusable="false"
+        android:focusableInTouchMode="false">
 
         <TextView
             android:id="@+id/txtData"
@@ -20,7 +28,10 @@
             android:layout_alignParentTop="true"
             android:layout_marginLeft="3pt"
             android:layout_marginTop="3pt"
-            android:text="TextView" />
+            android:text="TextView"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"/>
 
         <TextView
             android:id="@+id/txtCliente"
@@ -30,7 +41,10 @@
             android:layout_marginTop="3pt"
             android:layout_toEndOf="@+id/txtDetPedido"
             android:layout_toRightOf="@+id/txtDetPedido"
-            android:text="TextView" />
+            android:text="TextView"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"/>
 
         <TextView
             android:id="@+id/txtFone"
@@ -42,7 +56,10 @@
             android:layout_toEndOf="@+id/txtCliente"
             android:layout_toRightOf="@+id/txtCliente"
             android:text="TextView"
-            android:layout_weight="0.65" />
+            android:layout_weight="0.65"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"/>
 
         <TextView
             android:id="@+id/txtValor"
@@ -54,8 +71,12 @@
             android:layout_toRightOf="@+id/txtFone"
             android:inputType="numberDecimal"
             android:text="TextView"
+            android:layout_weight="0.14"
             android:textAlignment="textEnd"
-            android:layout_weight="0.14" />
+
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"/>
 
     </LinearLayout>
 
@@ -70,7 +91,9 @@
         android:layout_marginLeft="6pt"
         android:layout_marginTop="2pt"
         android:text="TextView"
-        android:layout_weight="0.04" />
+        android:layout_weight="0.04" android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"/>
 
 
 </LinearLayout>
