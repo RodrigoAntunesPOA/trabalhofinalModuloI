@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:id="@+id/detTit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/txtData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="3pt"
+            android:layout_marginTop="3pt"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/txtCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3pt"
+            android:layout_marginTop="3pt"
+            android:layout_toEndOf="@+id/txtDetPedido"
+            android:layout_toRightOf="@+id/txtDetPedido"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/txtFone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/txtCliente"
+            android:layout_marginLeft="3pt"
+            android:layout_marginTop="3pt"
+            android:layout_toEndOf="@+id/txtCliente"
+            android:layout_toRightOf="@+id/txtCliente"
+            android:text="TextView"
+            android:layout_weight="0.65" />
+
+        <TextView
+            android:id="@+id/txtValor"
+            android:layout_width="126dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/txtFone"
+            android:layout_marginTop="3pt"
+            android:layout_toEndOf="@+id/txtFone"
+            android:layout_toRightOf="@+id/txtFone"
+            android:inputType="numberDecimal"
+            android:text="TextView"
+            android:textAlignment="textEnd"
+            android:layout_weight="0.14" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtDetPedido"
+        android:layout_width="357dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtData"
+        android:layout_alignStart="@+id/txtData"
+        android:layout_below="@+id/txtData"
+        android:layout_marginBottom="2pt"
+        android:layout_marginLeft="6pt"
+        android:layout_marginTop="2pt"
+        android:text="TextView"
+        android:layout_weight="0.04" />
+
+
+</LinearLayout>
